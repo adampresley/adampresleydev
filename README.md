@@ -1,5 +1,5 @@
 # adampresleydev
 
-Code for my [https://adampresley.dev](resume website).
+Code for my [resume website](https://adampresley.dev).
 
 
