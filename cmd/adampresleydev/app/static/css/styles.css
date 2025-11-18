@@ -1,0 +1,168 @@
+body>footer,
+body>header {
+   padding: 1rem;
+}
+
+body>footer {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+
+   section {
+      margin-bottom: 0.5rem;
+   }
+}
+
+a {
+   cursor: pointer;
+}
+
+article.error {
+   background-color: #ffebee;
+   color: #b71c1c;
+}
+
+article.success {
+   background-color: #e8f5e9;
+   color: #1b5e20;
+}
+
+article.warning {
+   background-color: #fff8e1;
+   color: #ff6f00;
+}
+
+/*
+ * Header 
+ */
+header {
+   &.top-header {
+      nav {
+         ul {
+            li {
+               h1 {
+                  a {
+                     img {
+                        max-height: 3.5rem;
+                     }
+                  }
+               }
+            }
+         }
+      }
+   }
+}
+
+/* Greeting */
+.greeting {
+   display: flex;
+   flex-direction: row-reverse;
+   gap: 1.5rem;
+   justify-content: left;
+   align-items: center;
+   margin-bottom: 2rem;
+
+   img {
+      border-radius: 50%;
+      max-height: 10rem;
+      filter: brightness(110%);
+   }
+}
+
+/* About me */
+.about-me {
+   p.blocked {
+      border-left: 10px solid var(--pico-blockquote-border-color);
+      padding-left: 2rem;
+   }
+}
+
+/*
+ * Call to action
+ */
+.call-to-action {
+   margin-bottom: 2rem;
+   padding: 2rem;
+   border: 1px solid var(--pico-accordion-border-color);
+   border-radius: 10px;
+   background-color: var(--pico-card-background-color);
+
+   img {
+      max-height: 15rem;
+      margin-bottom: 1rem;
+   }
+}
+
+/*
+ * Timeline
+ */
+.timeline {
+   padding: 0;
+   position: relative;
+   margin-top: 2rem;
+   margin-bottom: 2rem;
+
+   li {
+      list-style: none;
+      position: relative;
+      margin-bottom: 2rem;
+      padding-left: 4rem;
+
+      article {
+         header {
+            color: var(--pico-primary);
+         }
+
+         p:last-child {
+            margin-bottom: 0;
+         }
+      }
+   }
+
+   li:last-child {
+      margin-bottom: 0;
+   }
+
+   .timeline-bubble,
+   .initials-bubble {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50%;
+      background: var(--pico-card-background-color);
+      z-index: 1;
+      border: 1px solid var(--pico-muted-border-color);
+   }
+
+   .timeline-bubble {
+      object-fit: contain;
+   }
+
+   .initials-bubble {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+   }
+
+   .timeline-year {
+      position: absolute;
+      left: 0;
+      top: 3.2rem;
+      width: 3rem;
+      text-align: center;
+      font-size: 0.8rem;
+   }
+}
+
+.timeline::before {
+   content: '';
+   position: absolute;
+   top: 0;
+   bottom: 0;
+   left: 1.5rem;
+   width: 2px;
+   background: var(--pico-muted-border-color);
+}

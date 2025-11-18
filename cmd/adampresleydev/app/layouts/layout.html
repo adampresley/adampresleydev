@@ -1,0 +1,58 @@
+{{- define "layouts/layout"}}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <meta name="color-scheme" content="light dark" />
+   <title>Adam Presley</title>
+   <link type="text/css" rel="stylesheet" media="screen" href="/static/css/pico.min.css" />
+   <link type="text/css" rel="stylesheet" media="screen" href="/static/css/styles.css" />
+   <link type="text/css" rel="stylesheet" media="screen" href="/static/css/icons.css" />
+   {{stylesheetIncludes "Stylesheets" .}}
+</head>
+
+<body>
+   <header class="grid top-header">
+      <nav>
+         <ul>
+            <li>
+               <h1>
+                  <a href="/">Adam Presley</a>
+               </h1>
+            </li>
+         </ul>
+         <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/experience">Experience</a></li>
+         </ul>
+      </nav>
+   </header>
+   <!-- END NAV -->
+
+   <main id="mainContent" class="container">
+      {{template "content" .}}
+   </main>
+
+   <footer>
+      <section>
+         <a href="https://github.com/adampresley" target="_blank">
+            <span class="icon github medium" aria-label="Adam's Github"></span>
+         </a>
+
+         <a href="https://www.linkedin.com/in/adampresley/" target="_blank">
+            <span class="icon linkedin medium" aria-label="Adam's LinkedIn"></span>
+         </a>
+      </section>
+
+      <section>
+         <p>&copy; 2025 Adam Presley</p>
+      </section>
+   </footer>
+
+   {{javascriptIncludes "JavascriptIncludes" .}}
+</body>
+
+</html>
+{{end}}

@@ -1,0 +1,52 @@
+{{template "layouts/layout" .}}
+{{define "title"}}Home{{end}}
+{{define "content"}}
+
+<section class="greeting">
+   <h2>Greetings! I'm Adam</h2>
+   <img src="/static/images/adam-2.jpg" alt="Photo of Adam Presley" />
+</section>
+
+<section class="about-me">
+   <h3>About</h3>
+
+   <p class="blocked">
+      I am a software engineer with {{.NumYears}}+ experience in crafting and developing web applications,
+      services/APIs, and integrations across various industries, programming languages, and stacks. I have
+      strong expertise in Go, with practical experience in a plethora of other languages, such as Javascript,
+      Typescript, C#, ColdFusion, PHP, and more.
+   </p>
+
+   <p>
+      Over the course of my career, I have worked on numerous projects, from small websites to large-scale
+      microservices. I've built things like:
+   </p>
+
+   <ul>
+      <li>Shopping cart and e-commerce platforms</li>
+      <li>RESTful, XML, and GraphQL APIs</li>
+      <li>Static and dynamic websites</li>
+      <li>Command-line tools and automation scripts</li>
+      <li>
+         Integrations with a wide variety of APIs, systems, and platforms
+
+         <ul>
+            <li>Payment processors and gateways</li>
+            <li>Payroll and tax systems</li>
+            <li>Accounting software like Quickbooks</li>
+            <li>Travel booking management systems</li>
+            <li>Online image processing</li>
+         </ul>
+      </li>
+   </ul>
+
+   <p>
+      My career has spanned across various industries, including technology, finance, healthcare,
+      and entertainment. I am currently working at <a href="https://www.universalmusic.com/" target="_blank">Universal
+         Music Group</a>
+      as a Lead Developer working on software solutions for eCommerce store management, as well as
+      OMS, order and PO fulfillment, and warehousing.
+   </p>
+</section>
+
+{{end}}

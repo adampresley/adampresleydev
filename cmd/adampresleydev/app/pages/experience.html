@@ -1,0 +1,25 @@
+{{template "layouts/layout" .}}
+{{define "title"}}Experience{{end}}
+{{define "content"}}
+
+<h2>Experience</h2>
+
+<ul class="timeline">
+   {{range .Jobs}}
+   <li>
+      {{if .Logo}}
+      <img src="/static/images/company-logos/{{.Logo}}" alt="{{.LogoAlt}}" class="timeline-bubble" />
+      {{else}}
+      <div class="initials-bubble">{{.Initials}}</div>
+      {{end}}
+      <div class="timeline-year">{{.YearStarted}}</div>
+
+      <article>
+         <header>{{.Title}}</header>
+         {{.Description}}
+      </article>
+   </li>
+   {{end}}
+</ul>
+
+{{end}}
