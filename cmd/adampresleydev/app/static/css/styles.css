@@ -95,8 +95,34 @@ header {
    }
 }
 
+/*
+ * Skills
+ */
+.skills {
+   margin-bottom: 3rem;
+
+   h3 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+   }
+
+   article {
+      text-align: center;
+      padding: 1rem;
+
+      header {
+         font-weight: bold;
+      }
+   }
+}
+
 /* About me */
 .about-me {
+   h3 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+   }
+
    p.blocked {
       border-left: 10px solid var(--pico-blockquote-border-color);
       padding-left: 2rem;
