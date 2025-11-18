@@ -1,6 +1,7 @@
 package home
 
 import (
+	"html/template"
 	"net/http"
 
 	"github.com/adampresley/adamgokit/rendering"
@@ -22,6 +23,11 @@ func (c HomeController) ExperiencePage(w http.ResponseWriter, r *http.Request) {
 					as well as integrations across storefront, order and PO fulfillment, and warehousing.</p>
 					<p>I spend my time designing systems in Go and Typscript/Remix.</p>`,
 				YearStarted: "2021",
+				Highlights: []template.HTML{
+					"Built a service and process to standardize chart reporting for US, Canada, Australia, Britian, France, and Ireland",
+					"Reduced processing time of the customer self-cancel process by 75% (95th percentile)",
+					"Built the foundation service for processing Shopify webhooks with an event architecture to the UMG services stack",
+				},
 			},
 			{
 				Logo:    "app-nerds.svg",
@@ -32,6 +38,10 @@ func (c HomeController) ExperiencePage(w http.ResponseWriter, r *http.Request) {
 					and integrations. I sold my shares in 2024.</p>
 					<p>I designed applications and system using Go, JavaScript, and Wix.</p>`,
 				YearStarted: "2019",
+				Highlights: []template.HTML{
+					`Designed and built a workflow web application for <a href="https://www.in-lingo.com/" _target="_blank">In-Lingo</a> to manage paralegal document translations, with over 200 users processing over 48,000 documents.`,
+					`Built a service responsible for handling vendor and payment management for Title & Title, completely automating a previously manual process`,
+				},
 			},
 			{
 				Logo:    "symplr.svg",
@@ -42,6 +52,10 @@ func (c HomeController) ExperiencePage(w http.ResponseWriter, r *http.Request) {
 					agencies, direct hospital staffing, scheduling management, self scheduling, and vendor credentialing.</p>
 					<p>We built systems using Typescript, Angular, and Java.</p>`,
 				YearStarted: "2010",
+				Highlights: []template.HTML{
+					`Onboarded and trained a team of Java developers on JavaScript and Typescript fundamentals for an upcoming project`,
+					`Spearheaded an effort to redesign an outdated Client Access portal application using newer, component-based client and server code`,
+				},
 			},
 			{
 				LogoAlt:  "Equator Financial Solutions logo",
@@ -52,6 +66,7 @@ func (c HomeController) ExperiencePage(w http.ResponseWriter, r *http.Request) {
 					wrote ColdFusion web applications. I also served on the architecture team to help improve coding standards.</p>
 				`,
 				YearStarted: "2010",
+				Highlights:  []template.HTML{},
 			},
 			{
 				LogoAlt:  "eSports Partners, Inc. logo",
@@ -63,6 +78,7 @@ func (c HomeController) ExperiencePage(w http.ResponseWriter, r *http.Request) {
 					I also introduced Java and Groovy components for critical backend processing.<p>
 				`,
 				YearStarted: "2009",
+				Highlights:  []template.HTML{},
 			},
 			{
 				LogoAlt:  "Clearview Staffing Software logo",
@@ -75,6 +91,7 @@ func (c HomeController) ExperiencePage(w http.ResponseWriter, r *http.Request) {
 					C#.</p>
 				`,
 				YearStarted: "2005",
+				Highlights:  []template.HTML{},
 			},
 			{
 				LogoAlt:  "IT Storm, Inc. logo",
@@ -84,6 +101,7 @@ func (c HomeController) ExperiencePage(w http.ResponseWriter, r *http.Request) {
 					web sites and ecommerce solutions in PHP and ColdFusion.</p>
 				`,
 				YearStarted: "2003",
+				Highlights:  []template.HTML{},
 			},
 			{
 				LogoAlt:  "Scan-Direct, Inc. logo",
@@ -95,6 +113,7 @@ func (c HomeController) ExperiencePage(w http.ResponseWriter, r *http.Request) {
 					company file shares for archival and storage.</p>
 				`,
 				YearStarted: "2001",
+				Highlights:  []template.HTML{},
 			},
 		},
 	}

@@ -17,6 +17,16 @@
       <article>
          <header>{{.Title}}</header>
          {{.Description}}
+
+         {{if len .Highlights}}
+         <h3>Highlights</h3>
+
+         <ul>
+            {{range .Highlights}}
+            <li>{{.}}</li>
+            {{end}}
+         </ul>
+         {{end}}
       </article>
    </li>
    {{end}}

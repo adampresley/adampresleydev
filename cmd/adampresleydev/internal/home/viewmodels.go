@@ -23,4 +23,5 @@ type Job struct {
 	Title       string
 	Description template.HTML
 	YearStarted string
+	Highlights  []template.HTML
 }
