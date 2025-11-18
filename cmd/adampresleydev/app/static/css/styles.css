@@ -59,19 +59,39 @@ header {
    }
 }
 
-/* Greeting */
-.greeting {
+/*
+ * Hero 
+ */
+.hero {
    display: flex;
    flex-direction: row-reverse;
-   gap: 1.5rem;
-   justify-content: left;
    align-items: center;
-   margin-bottom: 2rem;
+   gap: 2rem;
+   margin-bottom: 3rem;
 
    img {
       border-radius: 50%;
-      max-height: 10rem;
+      max-height: 12rem;
       filter: brightness(110%);
+   }
+
+   .hero-text {
+      h2 {
+         font-size: 2.25rem;
+         margin-bottom: 0.5rem;
+      }
+
+      .subtitle {
+         font-size: 1.2rem;
+         margin-bottom: 1.5rem;
+         color: var(--pico-secondary-text-color);
+      }
+   }
+
+   .cta-buttons {
+      a {
+         margin-right: 0.5rem;
+      }
    }
 }
 
