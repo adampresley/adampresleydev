@@ -1,3 +1,9 @@
+:root {
+   --pico-primary: #007bff;
+   --pico-text-color: #212529;
+   --pico-card-background-color: #f8f9fa;
+}
+
 body>footer,
 body>header {
    padding: 1rem;
