@@ -11,3 +11,12 @@ description = "Run the application"
 run = [
    "process-compose up",
 ]
+
+[tasks.minify]
+description = "Minify the application"
+run = [
+   'mkdir -p ./cmd/adampresleydev/app/static/css/min/',
+   'purgecss --css ./cmd/adampresleydev/app/static/css/frameui.css --content "./cmd/adampresleydev/app/**/*.html" --output ./cmd/adampresleydev/app/static/css/min/',
+   'cleancss -o ./cmd/adampresleydev/app/static/css/frameui.min.css ./cmd/adampresleydev/app/static/css/min/frameui.css',
+   'rm -rf ./cmd/adampresleydev/app/static/css/min/',
+]

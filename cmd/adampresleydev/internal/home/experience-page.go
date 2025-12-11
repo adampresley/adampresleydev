@@ -24,9 +24,10 @@ func (c HomeController) ExperiencePage(w http.ResponseWriter, r *http.Request) {
 					<p>I spend my time designing systems in Go and Typscript/Remix.</p>`,
 				YearStarted: "2021",
 				Highlights: []template.HTML{
-					"Built a service and process to standardize chart reporting for US, Canada, Australia, Britian, France, and Ireland",
 					"Reduced processing time of the customer self-cancel process by 75% (95th percentile)",
+					"Built a service and process to standardize chart reporting for US, Canada, Australia, Britian, France, and Ireland",
 					"Built the foundation service for processing Shopify webhooks with an event architecture to the UMG services stack",
+					"Built services to integrate OMS, WMS, and product data for hundreds of UK online stores",
 				},
 			},
 			{
