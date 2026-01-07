@@ -6,11 +6,11 @@ import (
 	"log/slog"
 	"net/http"
 
-	"github.com/adampresley/adamgokit/httphelpers"
-	"github.com/adampresley/adamgokit/mux2"
-	"github.com/adampresley/adamgokit/rendering"
 	"github.com/adampresley/adampresleydev/cmd/adampresleydev/internal/configuration"
 	"github.com/adampresley/adampresleydev/cmd/adampresleydev/internal/home"
+	"github.com/adampresley/httphelpers/responses"
+	"github.com/adampresley/mux"
+	"github.com/adampresley/rendering"
 )
 
 var (
@@ -66,22 +66,22 @@ func main() {
 	 */
 	slog.Debug("setting up routes...")
 
-	routes := []mux2.Route{
+	routes := []mux.Route{
 		{Path: "GET /heartbeat", HandlerFunc: heartbeat},
 		{Path: "GET /experience", HandlerFunc: homeController.ExperiencePage},
 		{Path: "GET /", HandlerFunc: homeController.HomePage},
 	}
 
-	mux := mux2.Setup(
+	mux := mux.Setup(
 		&config,
 		routes,
 		shutdownCtx,
 		stopApp,
 
-		mux2.WithStaticContent("app", "/static/", appFS),
-		mux2.UseGzip(),
-		mux2.UseGzipForStaticFiles(),
-		mux2.WithDebug(Version == "development"),
+		mux.WithStaticContent("app", "/static/", appFS),
+		mux.UseGzip(),
+		mux.UseGzipForStaticFiles(),
+		mux.WithDebug(Version == "development"),
 	)
 
 	slog.Info("server started")
@@ -91,5 +91,5 @@ func main() {
 }
 
 func heartbeat(w http.ResponseWriter, r *http.Request) {
-	httphelpers.TextOK(w, "OK")
+	responses.TextOK(w, "OK")
 }

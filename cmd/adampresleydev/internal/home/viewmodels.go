@@ -3,7 +3,7 @@ package home
 import (
 	"html/template"
 
-	"github.com/adampresley/adamgokit/rendering"
+	"github.com/adampresley/rendering"
 )
 
 type HomePage struct {

@@ -4,13 +4,14 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/adampresley/adamgokit/httphelpers"
-	"github.com/adampresley/adamgokit/rendering"
+	"github.com/adampresley/httphelpers/requests"
+	"github.com/adampresley/httphelpers/responses"
+	"github.com/adampresley/rendering"
 )
 
 func (c HomeController) HomePage(w http.ResponseWriter, r *http.Request) {
 	if r.URL.Path != "/" {
-		httphelpers.WriteText(w, http.StatusNotFound, "Not Found")
+		responses.Text(w, http.StatusNotFound, "Not Found")
 		return
 	}
 
@@ -18,7 +19,7 @@ func (c HomeController) HomePage(w http.ResponseWriter, r *http.Request) {
 
 	viewData := HomePage{
 		BaseViewModel: rendering.BaseViewModel{
-			IsHtmx:             httphelpers.IsHtmx(r),
+			IsHtmx:             requests.IsHtmx(r),
 			JavascriptIncludes: []rendering.JavascriptInclude{},
 		},
 		NumYears: time.Now().Year() - 2000,

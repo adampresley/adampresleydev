@@ -1,12 +1,12 @@
 package configuration
 
 import (
-	"github.com/adampresley/adamgokit/mux2"
 	"github.com/adampresley/configinator"
+	"github.com/adampresley/mux"
 )
 
 type Config struct {
-	mux2.Config
+	mux.Config
 	LogLevel string `flag:"loglevel" env:"LOG_LEVEL" default:"debug" description:"The log level to use. Valid values are 'debug', 'info', 'warn', and 'error'"`
 }
 

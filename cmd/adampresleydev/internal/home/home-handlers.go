@@ -3,8 +3,8 @@ package home
 import (
 	"net/http"
 
-	"github.com/adampresley/adamgokit/rendering"
 	"github.com/adampresley/adampresleydev/cmd/adampresleydev/internal/configuration"
+	"github.com/adampresley/rendering"
 )
 
 type HomeHandlers interface {

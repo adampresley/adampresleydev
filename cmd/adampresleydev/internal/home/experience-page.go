@@ -4,7 +4,7 @@ import (
 	"html/template"
 	"net/http"
 
-	"github.com/adampresley/adamgokit/rendering"
+	"github.com/adampresley/rendering"
 )
 
 func (c HomeController) ExperiencePage(w http.ResponseWriter, r *http.Request) {
