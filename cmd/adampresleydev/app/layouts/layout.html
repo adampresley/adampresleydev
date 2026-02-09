@@ -52,6 +52,13 @@
    </footer>
 
    {{javascriptIncludes "JavascriptIncludes" .}}
+
+   <script id="aletics-script" src="https://aletics.adampresley.com/aletics/v1/tracker.js" async defer></script>
+   <script>
+      document.querySelector("#aletics-script").onload = () => {
+         (Aletics.init("https://aletics.adampresley.com/aletics", "14019928-54a9-4103-80de-2dd95b0fec47")).track();
+      };
+   </script>
 </body>
 
 </html>
