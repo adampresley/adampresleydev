@@ -8,12 +8,14 @@ import (
 
 type HomePage struct {
 	rendering.BaseViewModel
-	NumYears int
+	AssetVersion string
+	NumYears     int
 }
 
 type Experience struct {
 	rendering.BaseViewModel
-	Jobs []Job
+	AssetVersion string
+	Jobs         []Job
 }
 
 type Job struct {

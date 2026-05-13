@@ -4,11 +4,12 @@
 
 <h2>Experience</h2>
 
+{{$assetVersion := .AssetVersion}}
 <ul class="timeline">
    {{range .Jobs}}
    <li>
       {{if .Logo}}
-      <img src="/static/images/company-logos/{{.Logo}}" alt="{{.LogoAlt}}" class="timeline-bubble" />
+      <img src="/static/images/company-logos/{{.Logo}}?v={{$assetVersion}}" alt="{{.LogoAlt}}" class="timeline-bubble" />
       {{else}}
       <div class="initials-bubble">{{.Initials}}</div>
       {{end}}

@@ -12,6 +12,7 @@ func (c HomeController) ExperiencePage(w http.ResponseWriter, r *http.Request) {
 
 	viewData := Experience{
 		BaseViewModel: rendering.BaseViewModel{},
+		AssetVersion:  c.assetVersion,
 		Jobs: []Job{
 			{
 				Logo:    "umg.svg",

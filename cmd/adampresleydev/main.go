@@ -57,8 +57,9 @@ func main() {
 	 * Setup controllers
 	 */
 	homeController = home.NewHomeController(home.HomeControllerConfig{
-		Config:   &config,
-		Renderer: renderer,
+		AssetVersion: Version,
+		Config:       &config,
+		Renderer:     renderer,
 	})
 
 	/*
@@ -79,6 +80,7 @@ func main() {
 		stopApp,
 
 		mux.WithStaticContent("app", "/static/", appFS),
+		mux.WithStaticCacheControl("public, max-age=31536000"),
 		mux.UseGzip(),
 		mux.UseGzipForStaticFiles(),
 		mux.WithDebug(Version == "development"),

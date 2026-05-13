@@ -13,18 +13,21 @@ type HomeHandlers interface {
 }
 
 type HomeControllerConfig struct {
-	Config   *configuration.Config
-	Renderer rendering.TemplateRenderer
+	AssetVersion string
+	Config       *configuration.Config
+	Renderer     rendering.TemplateRenderer
 }
 
 type HomeController struct {
-	config   *configuration.Config
-	renderer rendering.TemplateRenderer
+	assetVersion string
+	config       *configuration.Config
+	renderer     rendering.TemplateRenderer
 }
 
 func NewHomeController(config HomeControllerConfig) HomeController {
 	return HomeController{
-		config:   config.Config,
-		renderer: config.Renderer,
+		assetVersion: config.AssetVersion,
+		config:       config.Config,
+		renderer:     config.Renderer,
 	}
 }

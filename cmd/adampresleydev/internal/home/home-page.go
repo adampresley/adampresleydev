@@ -22,7 +22,8 @@ func (c HomeController) HomePage(w http.ResponseWriter, r *http.Request) {
 			IsHtmx:             requests.IsHtmx(r),
 			JavascriptIncludes: []rendering.JavascriptInclude{},
 		},
-		NumYears: time.Now().Year() - 2000,
+		AssetVersion: c.assetVersion,
+		NumYears:     time.Now().Year() - 2000,
 	}
 
 	c.renderer.Render(pageName, viewData, w)
