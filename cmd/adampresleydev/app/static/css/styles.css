@@ -1,3 +1,38 @@
+/*
+ * Color overrides
+ */
+:root:not([data-theme]),
+[data-theme=light] {
+   --primary: #1d4ed8;
+   --primary-background: #1d4ed8;
+   --primary-hover: #1e40af;
+   --primary-hover-background: #1e40af;
+   --secondary-background: #4b5563;
+   --secondary-hover-background: #374151;
+}
+
+@media only screen and (prefers-color-scheme: dark) {
+   :root:not([data-theme]) {
+      --primary: #60a5fa;
+      --primary-background: #60a5fa;
+      --primary-hover: #93c5fd;
+      --primary-hover-background: #93c5fd;
+      --primary-inverse: #111827;
+      --secondary-background: #9ca3af;
+      --secondary-hover-background: #d1d5db;
+   }
+}
+
+[data-theme=dark] {
+   --primary: #60a5fa;
+   --primary-background: #60a5fa;
+   --primary-hover: #93c5fd;
+   --primary-hover-background: #93c5fd;
+   --primary-inverse: #111827;
+   --secondary-background: #9ca3af;
+   --secondary-hover-background: #d1d5db;
+}
+
 body>footer,
 body>header {
    padding: 1rem;
