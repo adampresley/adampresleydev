@@ -35,4 +35,3 @@ func setupLogger(config *configuration.Config, version string) {
 	logger = slog.New(h)
 	slog.SetDefault(logger)
 }
-

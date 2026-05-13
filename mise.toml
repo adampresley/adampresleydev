@@ -6,7 +6,7 @@ process-compose = "1.75.2"
 
 [env]
 
-[tasks.run]
+[tasks.start]
 description = "Run the application"
 run = [
    "process-compose up",
